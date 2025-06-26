@@ -26,9 +26,9 @@ jobs:
           path: token.txt
 
   lunar_orbit_insertion:
-  needs: [launch]
-    runs-on: ubuntu-latest
-    steps:
+  needs: launch  
+  runs-on: ubuntu-latest
+  steps:
       - uses: actions/download-artifact@v4
         with:
           name: token
@@ -41,9 +41,9 @@ jobs:
           path: token.txt
 
   transposition_and_docking:
-  needs: [lunar_orbit_insertion]
-    runs-on: ubuntu-latest
-    steps:
+  needs: lunar_orbit_insertion
+  runs-on: ubuntu-latest
+  steps:
       - uses: actions/download-artifact@v4
         with:
           name: token
@@ -56,9 +56,9 @@ jobs:
           path: token.txt
 
   splashdown:
-   needs: [ransposition_and_docking]
-    runs-on: ubuntu-latest
-    steps:
+   needs: transposition_and_docking
+  runs-on: ubuntu-latest
+  steps:
       - uses: actions/download-artifact@v4
         with:
           name: token

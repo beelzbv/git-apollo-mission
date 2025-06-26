@@ -27,7 +27,6 @@ jobs:
 
   lunar_orbit_insertion:
     runs-on: ubuntu-latest
-    needs:[launch]
     steps:
       - uses: actions/download-artifact@v4
         with:

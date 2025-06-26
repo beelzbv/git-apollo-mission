@@ -22,7 +22,7 @@ jobs:
           echo "L" > token.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: token
+          name: token1
           path: token.txt
 
   lunar_orbit_insertion:
@@ -37,7 +37,7 @@ jobs:
             echo "N" >> token.txt
         - uses: actions/upload-artifact@v4
           with:
-            name: token
+            name: token2
             path: token.txt
 
   transposition_and_docking:
@@ -52,7 +52,7 @@ jobs:
             echo "U" >> token.txt
         - uses: actions/upload-artifact@v4
           with:
-            name: token
+            name: token3
             path: token.txt
 
   splashdown:
